@@ -1,0 +1,32 @@
+{
+  "repository": "FelipeMadson/envdoctor",
+  "revision": "729ade740c7b21bf88e15f5473eec7d8126e8822",
+  "packageHash": "93aec5087d2ec38b1b42e4d297f4fd00036bca33f5fe04885dce2f5a4c128ce4",
+  "checks": [
+    {
+      "name": "typecheck",
+      "status": "passed"
+    },
+    {
+      "name": "behavior",
+      "status": "passed"
+    },
+    {
+      "name": "secrets",
+      "status": "passed"
+    },
+    {
+      "name": "dependency-vulnerabilities",
+      "status": "passed"
+    },
+    {
+      "name": "dependencies",
+      "status": "passed"
+    },
+    {
+      "name": "acceptance",
+      "status": "passed"
+    }
+  ],
+  "scope": "This change covers documentation. It does not certify the full product or the security and mutation-testing claims in legacy badges."
+}

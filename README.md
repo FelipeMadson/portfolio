@@ -24,17 +24,25 @@ GitHub Pages hosts the static build in docs/. Linked applications and databases 
 
 ## Scope
 
-## [CI Workflow Fix for Build Failures](https://github.com/FelipeMadson/logsentinel-memory-guard)
+## [WebhookVault · reproducible builds](https://github.com/FelipeMadson/webhookvault)
 
-The CI workflow was modified to stop on build failures and enforce strict type checks. This ensures that actual type-checking errors are visible and that strict type enforcement is maintained.
+Pinned development dependencies, added a lockfile and configured strict TypeScript checks in CI.
+
+This update improves tooling and CI processes but does not certify the entire webhook product or its legacy public claims. Maintenance of dependencies and CI is handled by the linked repository, and this portfolio is static.
+
+[Verified revision](https://github.com/FelipeMadson/webhookvault/commit/63e1c58c2ba7443aae913505572600cbb573cdc3)
+
+## [LogSentinel · build and CI maintenance](https://github.com/FelipeMadson/logsentinel-memory-guard)
+
+Updated dependency versions, the lockfile and TypeScript configuration. CI now stops when the build fails.
 
 Installation, build, strict type checking and the existing tests were verified for this change. They do not certify every product feature or legacy badge.
 
 [Verified revision](https://github.com/FelipeMadson/logsentinel-memory-guard/commit/6e412187862151739cc89bfa228baed884dacd35)
 
-## [README.md Cleanup](https://github.com/FelipeMadson/envdoctor)
+## [Envdoctor · clearer documentation](https://github.com/FelipeMadson/envdoctor)
 
-The README.md file contained duplicate badges and links, which reduced clarity and reading efficiency. The change removed these duplicates to maintain consistency and improve the user experience.
+Removed duplicated README sections and links while preserving installation instructions.
 
 This change covers documentation. It does not certify the full product or the security and mutation-testing claims in legacy badges.
 

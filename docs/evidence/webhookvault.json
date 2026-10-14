@@ -1,0 +1,40 @@
+{
+  "repository": "FelipeMadson/webhookvault",
+  "revision": "63e1c58c2ba7443aae913505572600cbb573cdc3",
+  "packageHash": "cd599b1a55d2853cf158c4ea6c5ab5a0e7ab3ba16ec93421873f8516a94568e4",
+  "checks": [
+    {
+      "name": "dependency-resolution",
+      "status": "passed"
+    },
+    {
+      "name": "typecheck",
+      "status": "passed"
+    },
+    {
+      "name": "build",
+      "status": "passed"
+    },
+    {
+      "name": "behavior",
+      "status": "passed"
+    },
+    {
+      "name": "secrets",
+      "status": "passed"
+    },
+    {
+      "name": "dependency-vulnerabilities",
+      "status": "passed"
+    },
+    {
+      "name": "dependencies",
+      "status": "passed"
+    },
+    {
+      "name": "acceptance",
+      "status": "passed"
+    }
+  ],
+  "scope": "This update improves tooling and CI processes but does not certify the entire webhook product or its legacy public claims. Maintenance of dependencies and CI is handled by the linked repository, and this portfolio is static."
+}

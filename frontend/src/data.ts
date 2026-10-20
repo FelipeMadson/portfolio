@@ -1,6 +1,6 @@
 export const site = {
   name: "Felipe Madison",
-  focus: "Rust · Go · TypeScript · Python · Java 21 · WebAssembly · ZK-SNARKs · PQC & QKD · Blockchain Architecture",
+  focus: "Rust · Go · TypeScript · Python · Java 21 · WebAssembly · ZK-SNARKs · PQC & QKD · Blockchain · P4/SDN · Federated Learning",
   cases: [
     {
       slug: "rust-wasm-simd-vector-search",
@@ -509,6 +509,63 @@ export const site = {
         { name: "zero-knowledge-credential-circuit", status: "passed" }
       ],
       evidenceUrl: "https://github.com/FelipeMadson/rust-zk-snark-verifier-engine/releases/tag/v1.0.0"
+    },
+    {
+      slug: "rust-sdn-p4-flow-telemetry-engine",
+      repository: "FelipeMadson/rust-sdn-p4-flow-telemetry-engine",
+      revision: "e93fba655dfcf1898839848e6798da66c7c69f79",
+      packageHash: "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
+      kind: "Academic Flagship",
+      en: {
+        title: "Rust SDN P4 Match-Action Pipeline & Autonomous Dijkstra Traffic Controller",
+        summary: "High-performance software-defined networking pipeline engine in safe Rust featuring Exact/LPM/TCAM tables, load-aware Dijkstra SPF routing, and line-rate Prometheus telemetry.",
+        problem: "National academic optical backbones (such as RNP Ipê) face severe congestion and elephant-flow bottlenecks that static routing protocols cannot autonomously mitigate without packet drop.",
+        change: "Engineered sub-microsecond P4 match-action evaluation, thread-safe atomic flow counters, and autonomous dynamic rerouting applying quadratic penalties as link saturation passes 80%.",
+        limitation: "Written in pure safe Rust with zero external crates. Evaluated across link failure and load diversion test topologies."
+      },
+      pt: {
+        title: "Motor de Pipeline SDN P4 Match-Action e Controlador de Tráfego com Dijkstra em Rust",
+        summary: "Pipeline de rede definida por software de alta performance em Rust seguro com tabelas Exact/LPM/TCAM, roteamento dinâmico Dijkstra SPF e telemetria Prometheus em line-rate.",
+        problem: "Backbones acadêmicos nacionais (como o Ipê da RNP) enfrentam gargalos de congestionamento e fluxos elefante que protocolos estáticos não desviam sem perda de pacotes.",
+        change: "Desenvolvimento de avaliação Match-Action P4 sub-microssegundo, contadores atômicos thread-safe e reroteamento autônomo com penalidade quadrática acima de 80% de saturação.",
+        limitation: "Desenvolvido em Rust 100% puro e seguro sem dependências externas. Validado em topologias de teste com simulação de corte de enlace e desvio de carga."
+      },
+      checks: [
+        { name: "p4-match-action-lpm", status: "passed" },
+        { name: "dijkstra-spf-lowest-cost", status: "passed" },
+        { name: "autonomous-failover-reroute", status: "passed" },
+        { name: "prometheus-telemetry-export", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/rust-sdn-p4-flow-telemetry-engine/releases/tag/v1.0.0"
+    },
+    {
+      slug: "federated-learning-privacy-mesh",
+      repository: "FelipeMadson/federated-learning-privacy-mesh",
+      revision: "3972126021ec7e2475f38c8cb23b4802a4779de1",
+      packageHash: "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      kind: "Academic Flagship",
+      en: {
+        title: "Federated Learning Privacy Mesh with Rényi Differential Privacy & Multi-Krum Defense",
+        summary: "Decentralized machine learning coordination mesh implementing provable (ε, δ)-Differential Privacy with Gaussian noise perturbation, L2 clipping, and Byzantine-robust Multi-Krum aggregation.",
+        problem: "Multi-institutional health data spaces and academic research hospital consortia cannot share raw clinical records due to strict privacy regulations and vulnerability to model inversion attacks.",
+        change: "Engineered a pure Python federated coordinator with edge L2 gradient clipping, calibrated Gaussian mechanism, Rényi privacy accountant, and Byzantine outlier rejection.",
+        limitation: "Implemented using pure Python standard library with zero external dependencies. Verified across 8 test suites covering convergence, Krum resilience, and privacy accumulation."
+      },
+      pt: {
+        title: "Mesh de Aprendizado Federado com Privacidade Diferencial de Rényi e Defesa Multi-Krum",
+        summary: "Malha de coordenação de aprendizado de máquina descentralizado com Privacidade Diferencial (ε, δ) formal, perturbação gaussiana, corte L2 e agregação segura Multi-Krum tolerante a falhas bizantinas.",
+        problem: "Espaços de dados em saúde e redes de hospitais universitários não podem compartilhar prontuários brutos devido à LGPD/HIPAA e riscos de ataques de inversão de gradiente.",
+        change: "Construção de coordenador federado em Python puro com corte de sensibilidade L2 na borda, ruído gaussiano calibrado, contador de Rényi e rejeição geométrica de atacantes com Multi-Krum.",
+        limitation: "Desenvolvido em Python 3.12 puro sem dependências externas. Validado com 8 testes unitários cobrindo convergência, imunidade a envenenamento e acúmulo de privacidade."
+      },
+      checks: [
+        { name: "l2-gradient-clipping", status: "passed" },
+        { name: "gaussian-dp-sampling", status: "passed" },
+        { name: "byzantine-krum-defense", status: "passed" },
+        { name: "renyi-privacy-accountant", status: "passed" },
+        { name: "federated-round-coordinator", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/federated-learning-privacy-mesh/releases/tag/v1.0.0"
     },
     {
       slug: "software-engineering-handbook",

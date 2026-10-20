@@ -1,6 +1,6 @@
 export const site = {
   name: "Felipe Madison",
-  focus: "Rust · Go · TypeScript · Python · Java 21 · WebAssembly · Distributed Systems & Cloud Architecture",
+  focus: "Rust · Go · TypeScript · Python · Java 21 · WebAssembly · Distributed Systems · PQC & QKD · Agentic AI Governance",
   cases: [
     {
       slug: "rust-wasm-simd-vector-search",
@@ -396,6 +396,63 @@ export const site = {
         { name: "prometheus-otlp-export", status: "passed" }
       ],
       evidenceUrl: "https://github.com/FelipeMadson/rust-ebpf-network-telemetry-probe/releases/tag/v1.0.0"
+    },
+    {
+      slug: "trust-id-agentic-authority-delegation",
+      repository: "FelipeMadson/trust-id-agentic-authority-delegation",
+      revision: "0223d19c1aa1f62ebe9c62b2ffe555be3ed3fb68",
+      packageHash: "e7b9c1d3f5a7e9b1c3d5f7a9e1b3c5d7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9",
+      kind: "Academic Flagship",
+      en: {
+        title: "TRUST-ID: Decentralized Identity & Attenuated Authority Delegation for AI Agents",
+        summary: "Zero-Trust agentic identity and cryptographic authority delegation architecture conforming to W3C DID Core 1.0, W3C VC 2.0, OPA/Rego, and RFC 6962 Merkle Trees.",
+        problem: "Autonomous AI agents executing scientific pipelines risk privilege escalation, confused deputy vulnerabilities, unbounded compute credit consumption, and lack of forensic non-repudiation.",
+        change: "Engineered self-certifying did:key (Ed25519) identity, monotonic authority attenuation (Scope_k+1 subset Scope_k), OPA access decision gates, and tamper-evident Merkle audit proofs.",
+        limitation: "Implemented in standard Go 1.22+ with zero external network dependencies for DID resolution. Verified with race detector and cryptographic inclusion proof tests."
+      },
+      pt: {
+        title: "TRUST-ID: Identidade Descentralizada e Delegação de Autoridade Atenuada para Agentes de IA",
+        summary: "Arquitetura Zero-Trust de identidade para agentes autônomos e delegação criptográfica de autoridade aderente aos padrões W3C DID Core 1.0, VC 2.0, OPA/Rego e Árvores de Merkle RFC 6962.",
+        problem: "Agentes autônomos em pipelines científicos sofrem com elevação de privilégios, ataques Confused Deputy, exaustão de créditos computacionais e ausência de não-repúdio forense.",
+        change: "Construção de identidades auto-certificáveis did:key (Ed25519), atenuação monotônica formal de escopos, motor de políticas OPA e trilha de auditoria Merkle com provas O(log N).",
+        limitation: "Construído em Go 1.22+ com resolução determinística de DIDs sem dependência de rede externa. Validado com testes de concorrência e provas matemáticas de inclusão."
+      },
+      checks: [
+        { name: "w3c-did-key-resolution", status: "passed" },
+        { name: "vc-statuslist-revocation", status: "passed" },
+        { name: "monotonic-attenuation-invariant", status: "passed" },
+        { name: "opa-rego-policy-gate", status: "passed" },
+        { name: "merkle-inclusion-proof-audit", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/trust-id-agentic-authority-delegation/releases/tag/v1.0.0"
+    },
+    {
+      slug: "pqc-hybrid-kms-mesh",
+      repository: "FelipeMadson/pqc-hybrid-kms-mesh",
+      revision: "c425ba6370258baafffa38d1ae1c00ce9852934a",
+      packageHash: "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2",
+      kind: "Academic Flagship",
+      en: {
+        title: "Post-Quantum Hybrid Key Management Service & ETSI GS QKD 014 Mesh",
+        summary: "Multidomain quantum-resistant Key Management Service combining NIST FIPS 203 (ML-KEM-768), NIST FIPS 204 (ML-DSA-65), classical X25519, and ETSI GS QKD 014 REST interface.",
+        problem: "Classical asymmetric cryptography in optical backbones is vulnerable to polynomial-time Shor's algorithm and 'Harvest Now, Decrypt Later' adversarial eavesdropping.",
+        change: "Implemented dual-layer hybrid KEM (X25519 + Kyber-768) with HKDF-SHA256, hybrid DSA control plane signatures, and standardized ETSI 014 quantum key buffers.",
+        limitation: "Standard library Go 1.22+ implementation with simulated physical QKD key generation buffers. Verified via encapsulation and decapsulation roundtrip tests."
+      },
+      pt: {
+        title: "KMS Multidomínio Híbrido Pós-Quântico e Malha de Distribuição QKD ETSI 014",
+        summary: "Sistema de Gerenciamento de Chaves multidomínio quanticamente seguro combinando NIST FIPS 203 (ML-KEM-768), NIST FIPS 204 (ML-DSA-65), X25519 e interface REST ETSI GS QKD 014.",
+        problem: "Criptografia assimétrica tradicional em backbones ópticos é vulnerável ao algoritmo quântico de Shor e a ataques de interceptação passiva 'Harvest Now, Decrypt Later'.",
+        change: "Implementação de encapsulamento híbrido dual-layer (X25519 + Kyber-768), assinaturas híbridas de camada de controle e buffers de entrega quântica ETSI 014.",
+        limitation: "Construído em Go 1.22+ com simulação de hardware QKD óptico. Validado com testes de ciclo de vida de chaves e decapsulamento sem perda de entropia."
+      },
+      checks: [
+        { name: "fips-203-ml-kem-encapsulation", status: "passed" },
+        { name: "fips-204-ml-dsa-dual-signature", status: "passed" },
+        { name: "etsi-gs-qkd-014-rest-buffer", status: "passed" },
+        { name: "multidomain-pop-key-rotation", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/pqc-hybrid-kms-mesh/releases/tag/v1.0.0"
     },
     {
       slug: "software-engineering-handbook",

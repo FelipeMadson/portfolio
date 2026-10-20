@@ -343,7 +343,7 @@ export const site = {
     {
       slug: "go-raft-distributed-consensus-kv",
       repository: "FelipeMadson/go-raft-distributed-consensus-kv",
-      revision: "9568d8c637b69702d0ca66705d64335dd29ad99d",
+      revision: "0858ca46ee6ff957992a46ce9fc932ff96d336c9",
       packageHash: "f5c350e2af0fe529d8812c35a237b6f8fb4971162bfa6a217ee28391ee9246ef",
       kind: "Flagship System",
       en: {
@@ -368,6 +368,34 @@ export const site = {
         { name: "linearizable-kv-deduplication", status: "passed" }
       ],
       evidenceUrl: "https://github.com/FelipeMadson/go-raft-distributed-consensus-kv/releases/tag/v1.0.0"
+    },
+    {
+      slug: "rust-ebpf-network-telemetry-probe",
+      repository: "FelipeMadson/rust-ebpf-network-telemetry-probe",
+      revision: "e9dc0f4800b2839df3d94c32e50e9c551f45f97c",
+      packageHash: "787063a5041b9232f71439227eb1517a9193f7be96e06840fddb365006195ec4",
+      kind: "Flagship System",
+      en: {
+        title: "Rust eBPF Linux Kernel Network Telemetry & XDP Packet Filter",
+        summary: "High-performance in-kernel packet inspection and low-latency network telemetry probe in Rust using Aya eBPF and XDP with Prometheus metrics export.",
+        problem: "Traditional socket packet inspection (libpcap/AF_PACKET) imposes sk_buff allocation overhead and kernel context switching under multi-gigabit traffic surges.",
+        change: "Implemented an XDP kernel probe with zero-copy packet header parsing, in-kernel BPF hash map flow counters, and an asynchronous Tokio userspace telemetry daemon.",
+        limitation: "Engineered in Rust with Aya eBPF (no_std kernel bytecode). Verified via packet decoding simulation tests and privileged Linux container deployment."
+      },
+      pt: {
+        title: "Sonda de Telemetria de Rede em Kernel Linux com Rust e eBPF XDP",
+        summary: "Sonda de inspeção de pacotes e telemetria de rede de altíssima performance em espaço de kernel usando Rust, Aya eBPF e exportador Prometheus.",
+        problem: "A inspeção tradicional de rede (libpcap/AF_PACKET) impõe sobrecarga de alocação de sk_buff e trocas de contexto sob tráfego de múltiplos gigabits.",
+        change: "Construção de sonda XDP no kernel com decodificação zero-copy de cabeçalhos IP/TCP, mapas BPF atômicos no kernel e daemon assíncrono em Tokio.",
+        limitation: "Construído em Rust com Aya eBPF (código de kernel no_std). Validado com testes de simulação de decodificação e contêiner Linux privilegiado."
+      },
+      checks: [
+        { name: "cargo-test-simulation", status: "passed" },
+        { name: "xdp-packet-boundary-guard", status: "passed" },
+        { name: "bpf-hashmap-concurrency", status: "passed" },
+        { name: "prometheus-otlp-export", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/rust-ebpf-network-telemetry-probe/releases/tag/v1.0.0"
     },
     {
       slug: "software-engineering-handbook",

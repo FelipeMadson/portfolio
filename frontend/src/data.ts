@@ -229,23 +229,79 @@ export const site = {
       evidenceUrl: "https://github.com/FelipeMadson/angular-enterprise-clean-architecture/releases/tag/v1.0.0"
     },
     {
+      slug: "dotnet-cqrs-event-sourcing-engine",
+      repository: "FelipeMadson/dotnet-cqrs-event-sourcing-engine",
+      revision: "93f5ebda4dc0a1e789508f252ca0359375a573c0",
+      packageHash: "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      kind: "Flagship System",
+      en: {
+        title: ".NET 9 CQRS & Event Sourcing Engine with Transactional Outbox",
+        summary: "Enterprise-grade CQRS, Event Sourcing, and Transactional Outbox engine in .NET 9 and C# 13 with deterministic event replay and optimistic concurrency.",
+        problem: "Distributed microservices suffer from inconsistent data during partial failures and dual-write divergence between state and message brokers.",
+        change: "Implemented an Event Sourced Aggregate Root with strict optimistic concurrency control, an append-only event store, and a transactional outbox background worker.",
+        limitation: "Engineered with Clean Architecture and .NET 9. Event streams are verified using unit replay suites and outbox dispatch tests."
+      },
+      pt: {
+        title: "Motor de CQRS & Event Sourcing em .NET 9 com Transactional Outbox",
+        summary: "Motor corporativo de CQRS, Event Sourcing e Transactional Outbox em .NET 9 e C# 13 com replay determinístico de eventos e concorrência otimista.",
+        problem: "Microsserviços distribuídos sofrem com inconsistência de dados durante falhas parciais e divergência de dual-writes entre bancos relacionais e brokers.",
+        change: "Implementação de Raiz de Agregação orientada a Event Sourcing com controle estrito de versão esperada e processador Transactional Outbox em background.",
+        limitation: "Projetado com Clean Architecture e .NET 9. Fluxos de eventos validados com suítes de replay determinístico e testes de outbox."
+      },
+      checks: [
+        { name: "dotnet-build-release", status: "passed" },
+        { name: "aggregate-event-replay", status: "passed" },
+        { name: "optimistic-concurrency-guard", status: "passed" },
+        { name: "transactional-outbox-worker", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/dotnet-cqrs-event-sourcing-engine/releases/tag/v1.0.0"
+    },
+    {
+      slug: "go-distributed-telemetry-pipeline",
+      repository: "FelipeMadson/go-distributed-telemetry-pipeline",
+      revision: "54cdd683182e08b9716b19e43080fc431c868a3b",
+      packageHash: "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8",
+      kind: "Flagship System",
+      en: {
+        title: "Go Distributed Telemetry & Latency Pipeline",
+        summary: "High-throughput concurrent telemetry ingestion pipeline in Go 1.22+ with zero-allocation sliding-window ring buffer, token bucket rate limiter, and OTLP exporter.",
+        problem: "Observability pipelines suffer allocation overhead and latency spikes during high-throughput metric bursts.",
+        change: "Designed a lock-free sliding ring buffer calculating real-time P50, P90, P99 percentiles paired with a bounded worker pool and OpenTelemetry exporter.",
+        limitation: "Verified with table-driven tests and race detection. Supports OTLP JSON protocol compatible with OpenTelemetry collectors."
+      },
+      pt: {
+        title: "Pipeline de Telemetria e Latência Distribuída em Go",
+        summary: "Pipeline de ingestão de telemetria distribuída em Go 1.22+ com buffer circular de alocação zero para percentis P50/P90/P99, limitador Token Bucket e OTLP.",
+        problem: "Pipelines de observabilidade enfrentam sobrecarga de alocação de memória e picos de latência sob rajadas massivas de métricas.",
+        change: "Buffer circular em janela deslizante para cálculo de percentis P50, P90 e P99 em tempo real, pool de workers com contrapressão e exportador OpenTelemetry.",
+        limitation: "Validado com testes concorrentes e detector de race conditions. Gera payloads OTLP JSON compatíveis com coletores OpenTelemetry."
+      },
+      checks: [
+        { name: "go-race-detector", status: "passed" },
+        { name: "sliding-ring-buffer-percentiles", status: "passed" },
+        { name: "token-bucket-concurrency", status: "passed" },
+        { name: "otlp-schema-compliance", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/go-distributed-telemetry-pipeline/releases/tag/v1.0.0"
+    },
+    {
       slug: "software-engineering-handbook",
       repository: "FelipeMadson/software-engineering-handbook",
-      revision: "4e6c5fea879be33789c7c8b71cca7726f9698f0e",
+      revision: "33bac786eed5568d7055e5d1e8cb44a9b45d1803",
       packageHash: "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
       kind: "Technical Whitepaper Series",
       en: {
         title: "Software Engineering Handbook & Cryptographic Architecture Whitepapers",
-        summary: "8 exhaustive technical volumes covering distributed systems, local-first CRDTs, LSM-Tree storage, WASM SIMD, and zero-trust security.",
+        summary: "9 exhaustive technical volumes covering distributed systems, local-first CRDTs, LSM-Tree storage, WASM SIMD, and zero-trust security.",
         problem: "Superficial developer documentation often lacks mathematical rigor, failure model specifications, and verifiable cryptographic integrity.",
-        change: "Published an 8-volume engineering handbook with formal threat models, reference implementations, and immutable SHA-256 ledger verification.",
+        change: "Published a 9-volume engineering handbook with formal threat models, reference implementations, and immutable SHA-256 ledger verification.",
         limitation: "Volumes are authored with local LLM assistance under strict human architectural supervision and cryptographic ledger verification."
       },
       pt: {
         title: "Manual de Engenharia de Software e Whitepapers Criptográficos de Arquitetura",
-        summary: "8 volumes técnicos aprofundados sobre sistemas distribuídos, CRDTs, motores LSM-Tree, WASM SIMD e segurança zero-trust.",
+        summary: "9 volumes técnicos aprofundados sobre sistemas distribuídos, CRDTs, motores LSM-Tree, WASM SIMD e segurança zero-trust.",
         problem: "Documentações técnicas superficiais frequentemente carecem de rigor matemático, modelos de falha e integridade verificável.",
-        change: "Publicação de série com 8 volumes técnicos contendo modelos formais de ameaça, código de referência e ledger com hashes SHA-256 imutáveis.",
+        change: "Publicação de série com 9 volumes técnicos contendo modelos formais de ameaça, código de referência e ledger com hashes SHA-256 imutáveis.",
         limitation: "Conteúdo gerado com suporte de IA local sob supervisão arquitetural humana e validação estrita de integridade criptográfica."
       },
       checks: [

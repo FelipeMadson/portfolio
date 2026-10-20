@@ -231,7 +231,7 @@ export const site = {
     {
       slug: "dotnet-cqrs-event-sourcing-engine",
       repository: "FelipeMadson/dotnet-cqrs-event-sourcing-engine",
-      revision: "93f5ebda4dc0a1e789508f252ca0359375a573c0",
+      revision: "184e60bb1c5ebbccb38cdd8a6d0d631cb0c4d74a",
       packageHash: "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
       kind: "Flagship System",
       en: {
@@ -259,7 +259,7 @@ export const site = {
     {
       slug: "go-distributed-telemetry-pipeline",
       repository: "FelipeMadson/go-distributed-telemetry-pipeline",
-      revision: "54cdd683182e08b9716b19e43080fc431c868a3b",
+      revision: "cb0c560cabed7da44aa0024413e6121c48ad0180",
       packageHash: "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8",
       kind: "Flagship System",
       en: {
@@ -287,7 +287,7 @@ export const site = {
     {
       slug: "cpp20-lmax-orderbook-engine",
       repository: "FelipeMadson/cpp20-lmax-orderbook-engine",
-      revision: "e0ce6aa51b69f4c43331f5c1f27d0991d6e8e82d",
+      revision: "da5b8453e1a589cb74517503f2aca927815ae562",
       packageHash: "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9",
       kind: "Flagship System",
       en: {
@@ -315,7 +315,7 @@ export const site = {
     {
       slug: "elixir-distributed-actor-cluster",
       repository: "FelipeMadson/elixir-distributed-actor-cluster",
-      revision: "dc79a3e4d1575073946f6030866f9fb5800c131c",
+      revision: "baf1c58cf266f50317a2826c59215f21527aae31",
       packageHash: "c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0",
       kind: "Flagship System",
       en: {
@@ -339,6 +339,35 @@ export const site = {
         { name: "net-kernel-partition-detection", status: "passed" }
       ],
       evidenceUrl: "https://github.com/FelipeMadson/elixir-distributed-actor-cluster/releases/tag/v1.0.0"
+    },
+    {
+      slug: "go-raft-distributed-consensus-kv",
+      repository: "FelipeMadson/go-raft-distributed-consensus-kv",
+      revision: "9568d8c637b69702d0ca66705d64335dd29ad99d",
+      packageHash: "f5c350e2af0fe529d8812c35a237b6f8fb4971162bfa6a217ee28391ee9246ef",
+      kind: "Flagship System",
+      en: {
+        title: "Go Raft Distributed Consensus Engine & Linearizable Key-Value Store",
+        summary: "Production-grade fault-tolerant distributed Key-Value storage engine built from scratch in Go 1.22+ implementing the Raft Consensus Protocol with split-brain resilience.",
+        problem: "Distributed state storage architectures suffer data divergence, stale reads, and split-brain states when nodes crash or network partitions isolate cluster members.",
+        change: "Implemented complete Raft state machine replication with randomized election timeouts (150-300ms), fast conflict term backtracking, linearizable reads, and client sequence deduplication.",
+        limitation: "Standard library Go 1.22+ implementation with zero external dependencies. Verified via simulated network partition tests and race condition detector."
+      },
+      pt: {
+        title: "Motor de Consenso Distribuído Raft e Chave-Valor Linearizável em Go",
+        summary: "Motor de armazenamento Chave-Valor tolerante a falhas construído do zero em Go 1.22+ implementando o Protocolo de Consenso Raft com resiliência a partições.",
+        problem: "Arquiteturas de dados distribuídos sofrem divergência de estado, leituras obsoletas e split-brain quando nós falham ou partições de rede isolam membros do cluster.",
+        change: "Implementação completa do Raft com timeouts aleatórios (150-300ms), backtracking rápido de termos de conflito, leituras linearizáveis e deduplicação de requisições.",
+        limitation: "Construído em Go 1.22+ sem dependências externas. Validado com testes de injeção de partição de rede e detector de condições de corrida."
+      },
+      checks: [
+        { name: "go-race-detector", status: "passed" },
+        { name: "raft-election-safety", status: "passed" },
+        { name: "quorum-log-replication", status: "passed" },
+        { name: "network-partition-tolerance", status: "passed" },
+        { name: "linearizable-kv-deduplication", status: "passed" }
+      ],
+      evidenceUrl: "https://github.com/FelipeMadson/go-raft-distributed-consensus-kv/releases/tag/v1.0.0"
     },
     {
       slug: "software-engineering-handbook",
